@@ -1,0 +1,116 @@
+.navbar-nav .nav-item .nav-link{
+    color: grey;
+}
+
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrollbars */
+}
+
+.common-background-style {
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg1{
+    background-image: url("https://www.apple.com/v/home/by/images/heroes/iphone-16-pro/hero_iphone16pro_avail__fnf0f9x70jiy_largetall.jpg");
+    background-color: #000000; /* Fallback/underlay for bg1 */
+}
+.bg2{
+    background-image: url("https://www.apple.com/v/home/by/images/heroes/iphone-16/hero_iphone16_avail__euwzls69btea_medium_2x.jpg");
+    background-color: #1d1d1f; /* Fallback/underlay for bg2 - Apple dark grey */
+}
+.bg3{
+    background-image: url("https://www.apple.com/v/home/by/images/heroes/apple-watch-series-10/hero_apple_watch_series_10_avail_lte__esu66gaw6dci_medium_2x.jpg");
+    background-color: #f5f5f7; /* Fallback/underlay for bg3 - Apple light grey */
+}
+
+.card1{
+    background-image: url("https://www.apple.com/v/home/by/images/promos/apple-fitness-plus/promo_apple_fitness_plus__fvrnctwbcgqe_medium_2x.jpg");
+}
+
+.card2{
+    background-image: url("https://www.apple.com/v/home/by/images/promos/ipad-air/promo_ipadair_ai__3fv1eitzqv6y_medium_2x.jpg");
+}
+
+.card3{
+    background-image: url("https://www.apple.com/v/home/by/images/promos/macbook-pro/promo_macbookpro_announce__gdf98j6tj2ie_medium_2x.jpg");
+}
+
+.card4{
+    background-image: url("https://www.apple.com/v/home/by/images/promos/apple-watch-ultra-2/promo_apple_watch_ultra2_avail__dyawbjw9cowi_medium_2x.jpg");
+}
+
+.card5{
+    background-image: url("https://www.apple.com/v/home/by/images/promos/iphone-tradein/promo_iphone_tradein__bugw15ka691e_medium_2x.jpg");
+}
+
+.card6{
+    background-image: url("https://www.apple.com/v/home/by/images/promos/apple-card/promo_apple_card__5cm7draujpey_medium_2x.jpg");
+}
+
+/* Style for images within promo cards */
+.promo-card img{
+    margin-top: 40px;
+}
+.paragraph{
+    width: 80%;
+    color: grey;
+}
+.foot{
+background-color: #f5f5f7;
+}
+.btn{
+    padding: 10px 30px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767.98px) {
+    .common-background-style {
+        /* Default height for cards and other elements using this class on mobile */
+        /* Cards will still use background-size: cover from the base .common-background-style rule */
+        height: 450px; 
+    }
+
+    /* For the first three hero images, prioritize showing the whole image on mobile */
+    .bg1, .bg2, .bg3 {
+        background-size: cover; /* Revert to cover for the immersive feel */
+        height: 380px; /* Adjust height specifically for these hero sections on mobile. Try values like 350px, 400px, or 50vh */
+        /* Ensure no leftover padding from the 'contain' attempt if it was there */
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+
+    .hero_txt {
+        margin-top: 3rem !important; /* Adjust top margin for hero text */
+    }
+
+    .hero_txt h1 {
+        font-size: 2.2rem; /* Slightly smaller H1 for mobile */
+    }
+
+    /* The specific margin-top: 0 reset for .hero_txt within .bg1, .bg2, .bg3 is no longer needed
+       as these parent elements won't have the extra padding from the 'contain' strategy. */
+
+    .hero_txt h3, .hero_txt .fs-2 {
+        font-size: 1.1rem; /* Smaller H3/subheadings */
+    }
+
+    .hero_txt .btn {
+        padding: 8px 18px; /* Smaller buttons */
+        font-size: 0.9rem;
+    }
+
+    /* Specific adjustment for the logo image within .bg3 on mobile */
+    .bg3 .hero_txt img {
+        width: 180px !important; /* Make logo smaller */
+    }
+
+    /* Adjust images within promo cards for mobile */
+    .promo-card img {
+        max-width: 60%; /* Ensure images in cards don't get too wide */
+        margin-top: 25px; /* Adjust top margin */
+    }
+}
