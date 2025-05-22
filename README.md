@@ -1,0 +1,1 @@
+This project was created during my early practice in frontend development. As a beginner at the time, I chose to recreate an Apple website page to learn layout, styling, and responsive design. It represents one of my first steps in building real-world web interfaces.
